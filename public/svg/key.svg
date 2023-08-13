@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg"  width="100" height="100" viewBox="0 0 100 ">
+<foreignObject x='0' y='0' width='100%' height='100%'>
+<div xmlns="http://www.w3.org/1999/xhtml" style='width:96%;height: 96%;  display:grid; justify-content: center; align-content:center;   grid-template-columns:repeat(4, 1fr); grid-template-rows: repeat(4,23%); grid-row-gap:2%; grid-column-gap: 5%;'>
+<div style='width:100%; height: 100%;  background: rgba(0, 245, 212, 1); border-radius: 3px;'></div>
+<div style='width: 100%; height: 100%;  background: rgba(0, 245, 212, 1); border-radius: 3px; grid-column: 2/4;'></div>
+<div style='width: 100%; height: 100%;  background: rgba(0, 245, 212, 1); border-radius: 3px; '></div>
+<div style='width: 100%; height: 100%;  background: rgba(0, 245, 212, 1); border-radius: 3px; grid-column: 1/3;'></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; '></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; '></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; '></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; '></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; grid-column: 3/5;'></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; grid-column: 1/3;'></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; grid-column: 3/5'></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; '></div>
+<div style='width: 100%; height: 100%; background: rgba(0, 245, 212, 1); border-radius: 3px; '></div>
+
+</div>
+</foreignObject>
+</svg>
+
+

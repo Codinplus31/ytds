@@ -1,0 +1,628 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "Archivo";
+    src: url("./Alata-Regular.ttf") format("truetype");
+  }
+  .container{
+    width:100%;
+    font-family: 'Archivo';
+    height: 100vh;
+    overflow: auto;
+  }
+  .header{
+    height: 8%;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.5) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 0.2px inset;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    padding-left: 5.5%;
+  }
+  .header h1{
+    color: rgba(217, 4, 41, 0.8);
+  margin-left: 10px;
+  }
+  .main{
+    display: flex;
+    height: 92%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+.main::-webkit-scrollbar{
+width: 0;
+}
+.thumbgrid{
+display: grid;
+justify-items: center;
+grid-gap: 20px;
+width: 100%;
+
+}
+.thumbgrid > div > img{
+
+max-width: 100%;
+margin-top: 5px;
+justify-self: center;
+}
+.thumbgrid > div:not(.thumbentry) {
+  position: relative;
+  width: 100%;
+  display: grid;
+}
+.thumbgrid > div::after{
+  content: attr(title);
+  display:none;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  background: black;
+
+
+}
+
+.thumbentry {
+  width: 40% !important;
+  margin-top: 50px !important; 
+}
+
+.thumbgrid  > div:not(.entry):hover::after{
+  display: block;
+}
+
+
+.thumbbutton{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 15px;
+margin: 10px 0;
+/* border: 1px solid red; */
+width: 100%;
+}
+.thumbbutton button{
+  padding:5px 10px;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+}
+.thumbbutton button a{
+text-decoration: none;
+  color: white;
+}
+/* rgba(217, 4, 41 */
+
+.thumbbutton button:first-child{
+  background-color: rgb(0, 166, 251);
+}
+.thumbbutton button:last-child{
+  background-color: rgb(217, 4, 41);
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 68%;
+    border-radius: 7px;
+    max-width: 1200px;
+    max-height: 640px;
+  
+    
+    /* border: 1px solid red; */
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.9) 0px 0px 0px 0.2px inset;
+    overflow: hidden;
+}
+.card > img{
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  padding: 10px;
+  background:rgba(217, 4, 41, 0.4);
+  backdrop-filter: 60px;
+  -webkit-backdrop-filter: 50px;
+}
+  .logoCon, .titlekey{
+    width: clamp(250px,56vw,50.1%);
+    height: 100%;
+    background:rgba(217, 4, 41, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .logoCon > .round{ 
+    width: 90%;
+  }
+  .logoCon > p{
+    font-weight: 900;
+    font-size: x-large;
+    color: #ffffff;
+    position: absolute;
+    bottom: 10%;
+  }
+  .entry, .loading, .download{
+    width: clamp(250px,31.7vw,50%);
+    justify-content: center;
+    margin: 0 15px;
+  }
+  .download h2{
+    margin-bottom: 20px;
+  }
+  .download div{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+  .download div div{
+    height: 35px;
+    width: 20%;
+    position: relative;
+    border: 2px solid rgba(217, 4, 41, 1);
+    border-radius: 4px;
+  }
+  .download div select{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding-left: 4px;
+    /* background-color: white; */
+
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .download div div::after{
+    content: "\25Bd";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    pointer-events: none;
+
+  }
+  .download div option{
+    padding: 10px;
+  }
+  .download button{
+    width: 100%;
+    height: 40px;
+    background: rgba(217, 4, 41, 1); 
+    
+    font-size: 110%;
+    font-weight: 700;
+    border: 0;  
+    border-radius: 4px;
+    
+  }
+  .download button a{
+    text-decoration: none;
+    color: #cfcfcf;
+    }
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loading img{
+    width: 40%;
+    height: 40%;
+  }
+  .entry h1, h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .entry p{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .inpcon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .inpcon input{
+    width: 85%;
+    outline: 0;
+    height: 100%;
+    padding-left: 4px;
+    border: 0.9px solid #cfcfcf;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .content{
+    width: 100%;
+    height: 92%;
+    /* border: 1px solid yellow; */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: 33% 33%;
+    overflow: auto;
+    grid-row-gap: 80px;
+    /* scrollbar-track-color: white; */
+  }
+
+  .content::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 2px;
+    /* height: 100%; */
+  }
+  .content::-webkit-scrollbar-button{
+    display: none;
+    height: 0px;
+    width: 0%;
+  
+  }
+  .content::-webkit-scrollbar{
+   background: transparent;
+    width: 5px;
+    height: 100%;
+  }
+  .media{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    /* border: 1px solid red; */
+  
+  }
+  .media > h3{
+    margin-bottom: 20px;
+    color: #030507;
+    font-family: 'Archivo';
+  }
+  .media > div{
+    width: 98%;
+    height: 100%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+
+  
+  }
+  
+  .media > div > img{
+    width: 62%;
+    height: 62%;
+  }
+  
+  .media div:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.9) 0px 0px 0px 0.2px inset;
+  
+  }
+  .media:nth-child(1) div:hover{
+  background: rgba(217, 4, 41, 0.5) !important;
+}
+  .media:nth-child(2) div:hover{
+  background: rgba(0, 166, 251,0.5) !important;
+  }
+  .media:nth-child(3) div:hover{
+  background: rgba(0, 245, 212, 0.5) !important;
+  }
+  .media:nth-child(4) div:hover{
+  background:  rgba(112, 224, 0, 0.5) !important;
+  }
+  .image{
+
+    height: max-content;  
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 166, 251,0.5); */
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image > p{
+  margin-top: 20px;
+  font-size: 140%;
+  font-weight: 800;
+  }
+
+  .image > img{
+    width: 9rem;
+    /* position: absolute;
+    top: 20%; */
+    /* transform: ; */
+  }
+
+  /* .image > img:first-of-type{
+    transform: translateX(-50%) rotateZ(20deg);
+    left: 58%;
+  }
+
+  .image > img:last-of-type{
+    position: absolute;
+    left: 44%;
+    transform:translateX(-50%) rotateZ(-20deg) ;
+  } */
+
+  .inpcon input:hover {
+    border-color: rgba(217, 4, 41, 1);
+    }
+  .inpcon div {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+  .inpcon > div > button{
+    height: 100%;
+    width: 15%;
+    background: rgba(217, 4, 41, 1); 
+    color: #cfcfcf;
+    font-size: 110%;
+    font-weight: 700;
+    border: 0;  
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+  .inpcon > button{
+    border-radius: 4px;    
+    height: 40px;
+    border: 0;
+    background: rgba(217, 4, 41, 1); 
+    color: #fff;
+    font-size: 110%;
+    font-weight: 700;
+  }
+
+  .inpcon button:hover{
+    background: #d70427e6; 
+  }
+.logoCon > div {
+  position: absolute;
+  bottom: 7%;
+  color: rgba(217, 4, 41, 1);
+  font-weight: 800;
+  font-size:x-large;
+}
+
+.titlekey{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgba(0, 245, 212, 0.3);
+  /* justify-content: flex-start !important; */
+
+}
+
+.titlekey  > .words{
+ width: 94% !important;
+ height: 44% !important;
+ border: 3px solid white;
+ background-color: white;
+ border-radius: 4px;
+  display: block !important;
+  overflow: scroll;
+  }
+
+  .titlekey  > .words::-webkit-scrollbar-thumb{
+    background: #cfcfcfcf;
+    border-radius: 2px;
+    /* height: 100%; */
+  }
+  .titlekey  > .words::-webkit-scrollbar-button{
+    display: none;
+    height: 0px;
+    width: 0%;
+    text-decoration-color: red;
+  
+  }
+  .titlekey  > .words::-webkit-scrollbar{
+   background: transparent;
+    width: 5px;
+    height: 100%;
+  }
+
+  .titlekey  > .words > span{
+    background-color: #cfcfcfcf;
+    margin: 5px;
+    padding: 5px;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+    max-width: 10px !important;
+    border-radius: 15px;
+  
+    /* width: 5px; */
+  }
+.footer{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid lightgrey;
+}
+.footer > span {
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.footer > span > svg{
+    margin-right: 1rem;
+}
+
+
+@media  screen and (max-width:930px){
+  .thumbentry {
+    width: 60% !important;
+  }
+  }
+@media  screen and (max-width:600px){
+  .thumbentry {
+    width: 85% !important;
+  }
+  }
+@media  screen and (max-width:353px){
+  .thumbentry {
+    width: 97% !important;
+  }
+  }
+  @media  screen and (max-height:600px){
+    .card{
+      min-height: 640px !important;
+      margin-top: 60%;
+    }
+    .header{
+    height: 40px;
+    }
+    }
+@media  screen and (max-width:821px){
+  .content{
+    grid-auto-rows: 26% 26%;
+  }
+}
+
+@media  screen and (max-width:876px){
+  .card{
+    flex-direction: column;
+    height: 90%;
+    gap: 20px;
+   }
+   .titlekey{
+    width: 100% !important;
+    overflow: hidden;
+   }
+   .titlekey > h2
+   { 
+    font-size:200% !important;
+  }
+   .keyflex{
+    flex-direction: column-reverse;
+   }
+   
+   .key{
+    margin-top: 30px;
+   }
+
+   .titlekey  > .words{
+    width: 80% !important;
+    height: 57% !important;
+   }
+   .titlekey  > button{
+    width: 80% !important;
+
+
+   }
+   .entry, .loading, .download{
+    width:100%;
+    height: 55%;
+    padding: 0 15px;
+   }
+  .logoCon{
+    width:100%;
+    height: 45%;
+  }
+  .logoCon > .round{ 
+    width: 60%;
+    margin-bottom: 22px;
+  }
+  .logoCon > p{
+    position: absolute;
+    bottom: 1%;
+  }
+  .loading img{
+    width: 30%;
+    height: 50%;
+  }
+}
+
+@media  screen and (max-width:650px){ 
+  .logoCon > .round{ 
+    width: 65%;
+  }  
+  .titlekey  > .words{
+    width: 94% !important;
+   }
+   .titlekey  > button{
+    width: 94% !important;
+
+   }
+}
+
+@media  screen and (max-width:540px){ 
+  .logoCon > .round{ 
+    width: 65%;
+  }  
+  .loading img{
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media  screen and (max-width:400px){
+
+
+}
+
+@media  screen and (max-width:451px){
+.card{
+  width: 90%;
+}
+
+.content{
+  grid-template-columns:repeat(2, 1fr);
+  grid-auto-rows: 26% 26%;
+}
+
+.loading img{
+  width: 40%;
+  height: 40%;
+}
+.logoCon > .round{ 
+  width: 81%;
+}
+.download div div{
+  height: 35px;
+  width: 22%;
+}
+
+.logoCon > p{
+  position: absolute;
+  bottom: 4%;
+}
+
+}
+          
+
+
+
+
+
+
