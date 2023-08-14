@@ -68,6 +68,22 @@ return e.hasVideo  == false && e.hasAudio == true;
 console.log(index, data?.data,'cool')
 console.log(loader, 'format', data?.data.info)
 let title = data?.data.video.title.slice(0, 34);
+
+function downloads(){
+const responseStream = await fetch(start[index]?.url);
+      const videoBlob = await responseStream.blob();
+
+      // Create a downloadable link
+      const downloadLink = document.createElement('a');
+      downloadLink.href = URL.createObjectURL(videoBlob);
+      downloadLink.download = `${videoTitle}.${start[index]?.container}`;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      }
+
+
+  
 return (
 // https://www.youtube.com/watch?v=ev3QWo-x6Sc
 // https://www.youtube.com/watch?v=pBk4NYhWNMM
@@ -117,7 +133,7 @@ return (
           </div>
         </div>
         <button onClick={(e)=> e.target.children[0]?.click()}>
-          <a href={start[index]?.url} download={'ytds - ' + data?.data.video.title} >
+          <a onClick={downloads} >
           Download
           </a>
           </button>
