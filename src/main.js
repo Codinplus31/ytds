@@ -132,10 +132,8 @@ return (
           </select>
           </div>
         </div>
-        <button onClick={(e)=> e.target.children[0]?.click()}>
-          <a onClick={downloads}>
+        <button  onClick={downloads}>
           Download
-          </a>
           </button>
           </div>
           <img src='./svg/x.svg' onClick={()=> {
