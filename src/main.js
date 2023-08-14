@@ -132,8 +132,10 @@ return (
           </select>
           </div>
         </div>
-       <button onClick={handleFetchData}>
+        <button onClick={(e)=> e.target.children[0]?.click()}>
+          <a href={start[index]?.url} download={start[index]?.hasAudio === true && start[index]?.hasVideo === false? 'ytds - ' + data?.data.video.title + ".mp3":'ytds - ' + data?.data.video.title} >
           Download
+          </a>
           </button>
           </div>
           <img src='./svg/x.svg' onClick={()=> {
