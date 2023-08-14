@@ -69,7 +69,7 @@ console.log(index, data?.data,'cool')
 console.log(loader, 'format', data?.data.info)
 let title = data?.data.video.title.slice(0, 34);
 
-async function downloads(){
+const handleFetchData = async () => {
 const responseStream = await fetch(start[index]?.url);
       const videoBlob = await responseStream.blob();
 
@@ -132,7 +132,7 @@ return (
           </select>
           </div>
         </div>
-       <button onClick={downloads}>
+       <button onClick={handleFetchData}>
           Download
           </button>
           </div>
