@@ -76,7 +76,7 @@ const responseStream = await fetch(start[index]?.url);
       // Create a downloadable link
       const downloadLink = document.createElement('a');
       downloadLink.href = URL.createObjectURL(videoBlob);
-      downloadLink.download = `${videoTitle}.${start[index]?.container}`;
+      downloadLink.download = `${data?.data.video.title}.${start[index]?.container}`;
       document.body.appendChild(downloadLink);
       downloadLink.click();
       document.body.removeChild(downloadLink);
