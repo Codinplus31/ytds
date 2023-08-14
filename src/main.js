@@ -132,7 +132,7 @@ return (
           </select>
           </div>
         </div>
-        <button onClick={(e)=> e.target.children[0]?.click()}>
+        <button >
           <a onClick={downloads} >
           Download
           </a>
