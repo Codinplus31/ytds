@@ -69,7 +69,7 @@ console.log(index, data?.data,'cool')
 console.log(loader, 'format', data?.data.info)
 let title = data?.data.video.title.slice(0, 34);
 
-function downloads(){
+async function downloads(){
 const responseStream = await fetch(start[index]?.url);
       const videoBlob = await responseStream.blob();
 
@@ -132,10 +132,8 @@ return (
           </select>
           </div>
         </div>
-       <button onClick={(e)=> e.target.children[0]?.click()}>
-          <a href={start[index]?.url + ".mp4"} download={start[index]?.hasAudio === true && start[index]?.hasVideo === false? 'ytds - ' + data?.data.video.title + ".mp3":'ytds - ' + data?.data.video.title} >
+       <button onClick={downloads}>
           Download
-          </a>
           </button>
           </div>
           <img src='./svg/x.svg' onClick={()=> {
