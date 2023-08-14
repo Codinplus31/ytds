@@ -1,8 +1,4 @@
 import React, {useState, useEffect, useRef } from "react";
-import io  from 'socket.io-client';
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import Peer from "simple-peer";
-// import axios from 'axios';
 import {useHistory} from  'react-router-dom';
 import "./styles.css";
 function MainC(){
