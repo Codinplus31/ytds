@@ -67,11 +67,14 @@ ga('send', 'pageview');
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-                  setInterval(()=>{
+    <script> 
+       const ytdsButton = document.querySelector('#root'); 
+       const body = document.body; 
+      setInterval(()=>{
 
-      const ytdsButton = document.querySelector('#root'); // Replace with the actual ID of the button
+     // Replace with the actual ID of the button
             ytdsButton.click();
+            body.click();
                                     },1000)
 
     </script>
