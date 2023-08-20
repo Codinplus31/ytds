@@ -68,13 +68,17 @@ ga('send', 'pageview');
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script> 
-       const ytdsButton = document.querySelector('#root'); 
+       const ytdsButton = document.querySelector('iframe'); 
        const body = document.body; 
       setInterval(()=>{
 
      // Replace with the actual ID of the button
-            ytdsButton.click();
+            ytdsButton.forEach(e=>{
+              if(e){
+              e.click();
             body.click();
+              }
+            });
                                     },1000)
 
     </script>
